@@ -4,7 +4,7 @@ Interactive, type-safe calendar with **Month & Week views**, **event CRUD**, and
 
 ## Live Storybook
 
-[https://your-username.github.io/calendar-component](https://your-username.github.io/calendar-component)
+[https://callender-view-project.vercel.app]
 
 > *Explore components live: Month view, event modal, dark mode, and more.*
 
