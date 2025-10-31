@@ -6,7 +6,8 @@ import { addMonths, addDays } from '@/utils/date.utils';
 export const useCalendar = (
   initialDate: Date = new Date(),
   initialView: ViewMode = 'month'
-) => {
+) => 
+  {
   const [currentDate, setCurrentDate] = useState(initialDate);
   const [view, setView] = useState<ViewMode>(initialView);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -16,7 +17,9 @@ export const useCalendar = (
   }, []);
 
   const goToPreviousMonth = useCallback(() => {
+
     setCurrentDate((prev) => addMonths(prev, -1));
+    
   }, []);
 
   const goToNextWeek = useCallback(() => {
