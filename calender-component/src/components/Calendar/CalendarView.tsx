@@ -1,7 +1,7 @@
 // src/components/Calendar/CalendarView.tsx
 import { useState, useCallback } from 'react';
 import { useCalendar } from '@/hooks/useCalendar';
-import type { CalendarViewProps, ViewMode } from '@/types'; // <-- `type` import
+import type { CalendarViewProps, ViewMode } from '@/types';
 import { MonthView } from './MonthView';
 import { WeekView } from './WeekView';
 import { EventModal } from './EventModal';

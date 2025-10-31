@@ -1,6 +1,6 @@
 // src/components/Calendar/EventModal.tsx
 import { useState, useEffect } from 'react';
-import type { CalendarEvent, FormErrors } from '@/types'; // <-- `type` import
+import type { CalendarEvent, FormErrors } from '@/types';
 import { Modal } from '../primitives/Modal';
 import { Button } from '../primitives/Button';
 import { formatDate, addDays, isSameDay } from '@/utils/date.utils';

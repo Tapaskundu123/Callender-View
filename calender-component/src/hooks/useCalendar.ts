@@ -19,7 +19,7 @@ export const useCalendar = (
   const goToPreviousMonth = useCallback(() => {
 
     setCurrentDate((prev) => addMonths(prev, -1));
-    
+
   }, []);
 
   const goToNextWeek = useCallback(() => {

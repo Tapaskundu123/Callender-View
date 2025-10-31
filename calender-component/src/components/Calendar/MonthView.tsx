@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import CalendarCell from './CalendarCell';  // default import
 import { getCalendarGrid, isSameDay, formatDate } from '@/utils/date.utils';
 import { getEventsForDay } from '@/utils/event.utils';
-import type { CalendarEvent } from '@/types';  // type import
+import type { CalendarEvent } from '@/types';
 
 interface MonthViewProps {
   currentDate: Date;

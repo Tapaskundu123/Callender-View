@@ -15,7 +15,6 @@ export interface FormErrors {
   [key: string]: string;
 }
 
-// Add this if not already present
 export interface CalendarViewProps {
   events?: CalendarEvent[];
   onEventAdd?: (event: CalendarEvent) => void;
