@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "predeploy-storybook": "npm run build-storybook"
+
   },
   "dependencies": {
     "@storybook/addon-essentials": "^8.6.14",
