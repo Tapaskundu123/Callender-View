@@ -1,5 +1,5 @@
 import { CalendarView } from './CalendarView';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { CalendarEvent } from '@/types';
 
 const meta: Meta<typeof CalendarView> = {
