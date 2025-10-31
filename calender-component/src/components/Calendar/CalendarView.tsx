@@ -9,7 +9,8 @@ import { Button } from '../primitives/Button';
 import { Select } from '../primitives/Select';
 import { formatDate } from '@/utils/date.utils';
 import { cn } from '@/utils/classnames.utils';
-import { ChevronLeft, ChevronRight, Calendar, List } from 'lucide-react';
+// Line 12
+import { ChevronLeft, ChevronRight, Calendar } from 'lucide-react';  // Remove , List
 
 export const CalendarView: React.FC<CalendarViewProps> = ({
   events = [],

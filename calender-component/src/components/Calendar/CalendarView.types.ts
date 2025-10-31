@@ -1,5 +1,5 @@
-import { CalendarEvent, ViewMode, FormErrors } from '@/types';
-
+// src/components/Calendar/CalendarView.types.ts
+import type { CalendarEvent, ViewMode, FormErrors } from '@/types';  // Add `type`
 /**
  * Props for the CalendarView component
  */

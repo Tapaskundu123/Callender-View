@@ -1,7 +1,7 @@
 // src/components/Calendar/MonthView.tsx
 import { useMemo } from 'react';
 import CalendarCell from './CalendarCell';  // default import
-import { getCalendarGrid, isSameDay, formatDate } from '@/utils/date.utils';
+import { getCalendarGrid, isSameDay } from '@/utils/date.utils';
 import { getEventsForDay } from '@/utils/event.utils';
 import type { CalendarEvent } from '@/types';
 
@@ -47,7 +47,7 @@ export const MonthView: React.FC<MonthViewProps> = ({
             events={dayEvents}
             isCurrentMonth={isCurrentMonth}
             isToday={isToday}
-            isSelected={isSelected}
+           isSelected={!!isSelected}
             onClick={() => onDateClick(date)}
           />
         );

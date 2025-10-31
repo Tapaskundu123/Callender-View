@@ -1,5 +1,6 @@
+// .storybook/preview.ts
 import type { Preview } from '@storybook/react-vite';
-import '../src/styles/globals.css';
+import '@/styles/globals.css';  // Valid thanks to styles.d.ts
 
 const preview: Preview = {
   parameters: {
@@ -11,19 +12,19 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      options: {
-        light: { name: 'light', value: '#ffffff' },
-        dark: { name: 'dark', value: '#18181b' },
-        gray: { name: 'gray', value: '#f4f4f5' }
-      }
+      default: 'light',  // Use `default` + `values` (not `options`)
+      values: [
+        { name: 'light', value: '#ffffff' },
+        { name: 'dark', value: '#18181b' },
+        { name: 'gray', value: '#f4f4f5' },
+      ],
     },
   },
 
+  // Optional: Set initial background
   initialGlobals: {
-    backgrounds: {
-      value: 'light'
-    }
-  }
+    backgrounds: { value: 'light' },
+  },
 };
 
 export default preview;

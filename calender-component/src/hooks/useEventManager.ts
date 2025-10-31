@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
-import { CalendarEvent } from '@/types';
+// Line 2
+import type { CalendarEvent } from '@/types';  // Add `type`
 import { getEventsForDay, getOverlappingEvents, sortEventsByDate } from '@/utils/event.utils';
 
 export const useEventManager = (events: CalendarEvent[]) => {

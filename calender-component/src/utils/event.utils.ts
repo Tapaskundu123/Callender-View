@@ -1,6 +1,7 @@
 // src/utils/event.utils.ts
 import type { CalendarEvent } from '@/types';
-import { isSameDay, daysBetween, formatDate } from './date.utils';
+// Line 3
+import { daysBetween, formatDate } from './date.utils';  // Remove , isSameDay
 
 /**
  * Get all events for a specific day

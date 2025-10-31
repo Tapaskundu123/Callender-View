@@ -1,6 +1,7 @@
+// src/components/Calendar/CalendarView.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react';  // Single type-only import (correct package for React)
+import type { CalendarEvent } from '@/types';  // Type-only for CalendarEvent
 import { CalendarView } from './CalendarView';
-import { Meta, StoryObj } from '@storybook/react-vite';
-import { CalendarEvent } from '@/types';
 
 const meta: Meta<typeof CalendarView> = {
   title: 'Components/CalendarView',
@@ -9,45 +10,32 @@ const meta: Meta<typeof CalendarView> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    initialView: { control: 'radio', options: ['month', 'week'] },
+    className: { control: 'text' },
+  },
 };
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-type Story = StoryObj<typeof CalendarView>;
-
-const sampleEvents: CalendarEvent[] = [
-  {
-    id: '1',
-    title: 'Team Meeting',
-    description: 'Weekly sync with the team',
-    startDate: new Date(2024, 9, 25, 10, 0),
-    endDate: new Date(2024, 9, 25, 11, 0),
-    color: '#3b82f6',
-    category: 'Work',
-  },
-  {
-    id: '2',
-    title: 'Project Review',
-    description: 'Q4 project review',
-    startDate: new Date(2024, 9, 26, 14, 0),
-    endDate: new Date(2024, 9, 26, 16, 0),
-    color: '#10b981',
-    category: 'Meeting',
-  },
-];
-
-export const MonthView: Story = {
+export const Default: Story = {
   args: {
-    events: sampleEvents,
+    initialDate: new Date(),
     initialView: 'month',
-    initialDate: new Date(2024, 9, 1),
   },
 };
 
-export const WeekView: Story = {
+export const WithEvents: Story = {
   args: {
-    events: sampleEvents,
-    initialView: 'week',
-    initialDate: new Date(2024, 9, 1),
+    events: [
+      {
+        id: '1',
+        title: 'Meeting',
+        startDate: new Date(),
+        endDate: new Date(Date.now() + 60 * 60 * 1000),
+        color: '#3b82f6',
+      } as CalendarEvent,
+    ],
   },
 };

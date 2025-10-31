@@ -46,7 +46,7 @@ export const WeekView: React.FC<WeekViewProps> = ({
               key={hour}
               className="h-12 text-sm text-neutral-600 text-right pr-2 border-b border-neutral-200"
             >
-              {formatDate(new Date().setHours(hour, 0, 0, 0), 'HH:mm')}
+              {formatDate(new Date(new Date().setHours(hour, 0, 0, 0)), 'HH:mm')}
             </div>
           ))}
         </div>
